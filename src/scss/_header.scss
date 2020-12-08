@@ -1,0 +1,379 @@
+.header {
+  background-image: url('../img/header-background.png');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 718px;
+
+  &__nav-panel {
+    display: flex;
+    justify-content: space-between;
+    min-height: 105px;
+    align-items: center;
+    background: #27262A;
+    padding: 0 10px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      display: inline-block;
+      background-image: url('../img/header-logo.png');
+      width: 43px;
+      height: 41px;
+
+      &-text {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 16px;
+        color: $purple-lightColor;
+        margin-left: 17px;
+        display: none;
+      }
+    }
+  }
+
+  &__purchase-button {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 15px;
+    color: $white-textColor;
+    background: $purple-lightColor;
+    border-radius: 40px;
+    border: none;
+    padding: 11px 10px;
+    width: 119px;
+    outline: none;
+  }
+
+  &__menu {
+    display: none;
+
+    &.active {
+      display: block;
+      position: absolute;
+      top: 105px;
+      left: 10px;
+      width: calc(100% - 20px);
+      background: #333333;
+      min-height: 378px;
+    }
+
+    &-link.mobile {
+      padding: 30px 0 21px 35px;
+      border-bottom: 3px solid #3B3B3B;
+      position: relative;
+
+      &:hover:before {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 3px;
+        width: 8px;
+        height: 53px;
+        background: $purple-lightColor;
+      }
+
+      &:hover a {
+        padding-left: 5px;
+        color: $purple-lightColor;
+      }
+    }
+
+    &-link a {
+      color: $white-textColor;
+      font-size: 26px;
+    }
+
+    &-button {
+      width: 26px;
+      height: 30px;
+      background: transparent;
+      position: relative;
+      padding: 0;
+      border: none;
+      outline: none;
+      display: block;
+
+      &-lines,
+      &-lines::after,
+      &-lines::before {
+        position: absolute;
+        width: 26px;
+        height: 3px;
+        top: calc(50% - 1px);
+        left: calc(50% - 13px);
+        transition: all 0.3s;
+        background: $white-textColor;
+        border-radius: 5px;
+      }
+
+      &-lines::after {
+        content: "";
+        top: 8px;
+      }
+
+      &-lines::before {
+        content: "";
+        width: 13px;
+        top: -8px;
+        left: calc(50%);
+      }
+
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+    margin-top: 50px;
+    color: $white-textColor;
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 19px;
+    padding: 0 10px;
+    font-size: 18px;
+    line-height: 24px;
+    color: $purple-lightColor;
+
+    &-smaller {
+      font-size: 14px;
+      line-height: 14px;
+      color: #848E97;
+      text-align: center;
+      margin-top: 14px;
+    }
+  }
+
+  &__download-button {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $white-textColor;
+    min-width: 290px;
+    background:$purple-lightColor;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    padding: 13px 0;
+    margin: 0 auto;
+    margin-top: -23px;
+  }
+
+  &__footer-text {
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+    margin-top: 13px;
+    text-align: center;
+  }
+
+}
+
+button {
+  cursor: pointer;
+}
+
+.header__menu-button.active .header__menu-button-lines {
+  background-color: transparent;
+}
+
+.header__menu-button.active .header__menu-button-lines::before {
+  top: 0;
+  transition: all 0.2s;
+  transform: rotate(45deg);
+  width: 26px;
+  left: calc(50% - 13px);
+}
+
+.header__menu-button.active .header__menu-button-lines::after {
+  top: 0;
+  transition: all 0.2s;
+  transform: rotate(-45deg);
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .header {
+    &__title {
+      margin-top: 70px;
+    }
+
+    &__download-button {
+      font-size: 21px;
+      padding: 23px 0;
+      margin-top: -31px;
+      width: 390px;
+
+      &:hover {
+        border: 1px solid $purple-lightColor;
+        color: $purple-lightColor;
+        background: $white-textColor;
+        margin-bottom: -2px;
+      }
+    }
+
+    &__text {
+      font-size: 24px;
+
+      &-smaller {
+        margin-top: 19px;
+      }
+    }
+
+
+    &__logo {
+      width: 45%;
+
+      &-link:hover {
+        background-image: url('../img/header-logo-hover.png');
+      }
+
+    }
+
+    &__purchase-button {
+      justify-self: end;
+      width: 45%;
+      max-width: 145px;
+
+      &:hover {
+        border: 1px solid$purple-lightColor;
+        color: $purple-lightColor;
+        background:$white-textColor;
+      }
+    }
+
+    &__nav-panel {
+      min-height: 120px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__logo-link-text {
+      display: block;
+
+      &:hover {
+        color: $white-textColor;
+      }
+    }
+
+    &__menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+
+
+      &-link {
+        border-bottom: none;
+
+      }
+
+      &-link a {
+        font-weight: bold;
+        font-size: 16px;
+        color: $purple-lightColor;
+
+        &:hover {
+          color:$white-textColor;
+        }
+      }
+
+      &-button {
+        display: none;
+      }
+    }
+
+  }
+}
+
+@media (min-width: 993px) {
+  .header {
+
+    &__title {
+      font-size: 82px;
+      padding-bottom: 19px;
+    }
+
+    &__text {
+      font-size: 30px;
+
+      &-smaller {
+        font-size: 16px;
+      }
+    }
+
+    &__menu-button {
+      display: none;
+    }
+
+    &__logo {
+      grid-area: 1/1;
+
+      &-link:hover {
+        background-image: url('../img/header-logo-hover.png');
+      }
+
+      &-link-text {
+        display: block;
+
+        &:hover {
+          color:$white-textColor;
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__menu {
+      display: flex;
+      grid-area: 1/2;
+      justify-content: space-around;
+
+      &-link a {
+        font-weight: bold;
+        font-size: 16px;
+        color: $purple-lightColor;
+
+        &:hover {
+          color: $white-textColor;
+        }
+      }
+    }
+
+    &__purchase-button {
+      justify-self: center;
+      grid-area: 1/3;
+
+      &:hover {
+        border: 1px solid $purple-lightColor;
+        color: $purple-lightColor;
+        background: $white-textColor;
+      }
+    }
+
+    &__nav-panel {
+      background: transparent;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 45% 40% 15%;
+    }
+
+    &__download-button:hover {
+      border: 1px solid $purple-lightColor;
+      color: $purple-lightColor;
+      background: $white-textColor;
+      margin-bottom: -2px;
+    }
+  }
+
+}
+

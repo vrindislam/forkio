@@ -1,0 +1,85 @@
+.revolutionary-editor-section {
+  & h1 {
+    width: 80%;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #635C73;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 27px 0;
+  }
+
+  &__text {
+    font-family: 'Lato', sans-serif;
+    width: 90%;
+    color: #323232;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 36px;
+  }
+
+  &__btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-weight: bold;
+    border-radius: 7px;
+    border: 1px solid rgba(27,31,35,.15);
+    margin: 0 10px 20px 0;
+  }
+
+  &__btn-text{
+    color: black;
+    background-color: #F2F2F2;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid rgba(27,31,35,.15);
+    & svg{
+      margin-right: 3px;
+      vertical-align: middle;
+      margin-top: -3px;
+    }
+  }
+  &__btn-number{
+    color: black;
+    background-color: $white-textColor;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .revolutionary-editor-section{
+    & h1{
+      font-size: 42px;
+      padding: 94px 0 27px 0;
+    }
+    &__text{
+      width: 90%;
+      font-size: 21px;
+      line-height: 32px;
+    }
+  }
+}
+@media (min-width: 993px) {
+  .revolutionary-editor-section{
+    & h1{
+      font-size: 54px;
+      padding: 66px 0 27px 0;
+    }
+    &__text{
+      width: 60%;
+    }
+  }
+}

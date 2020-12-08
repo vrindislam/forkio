@@ -1,0 +1,113 @@
+.testimonials-section {
+  background-image: linear-gradient(to bottom, transparent 30%, #4b3b4e 70%), url('../img/testimonials-background.png');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-top:15px solid #4b3b4e;
+
+  &-container {
+    width: 90%;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    color: $white-textColor;
+    padding: 45px 0 10px 0;
+    line-height: 48px;
+    margin: 0 auto;
+  }
+
+  &__content-block {
+    padding-top: 45px;
+
+    &-review-text {
+      font-family: 'Lato', sans-serif;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      color: $white-textColor;
+      padding-top: 30px;
+    }
+  }
+
+  &__footer-text {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: #A291A5;
+    position: relative;
+  }
+
+  &__footer-line {
+    padding-top: 25px;
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 2px solid #645766;
+  }
+}
+
+.testimonials-section__content-block-logo {
+  height: 40px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .testimonials-section {
+    border-top:none;
+    background-image: url('../img/testimonials-background.png');
+    background-attachment: local;
+
+    &__title {
+      padding: 86px 0 40px 0;
+      font-size: 42px;
+      line-height: 44px;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__content-block {
+      width: 47%;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .testimonials-section {
+    border-top:none;
+    background-image: url('../img/testimonials-background.png');
+    background-attachment: local;
+
+    &__title {
+      padding: 108px 0 36px 0;
+      font-size: 48px;
+      line-height: 50px;
+      width: 100%;
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    &__content-block {
+      width: 30%;
+    }
+  }
+}
