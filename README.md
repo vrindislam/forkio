@@ -14,4 +14,4 @@
 
 Під час виконання даного проекту були викорастані наступні технології:npm,Gulp,Sass(Scss),Git,Методологія БЕМ,Javascript.
 
-Проект на Gitlab pages https: <https://mkorchak1992.gitlab.io/forkio >
+Проект на Gitlab pages https: <https://vrindislam.github.io/forkio/>
